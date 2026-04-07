@@ -2,10 +2,12 @@
 abstract class Shape
 {
     protected string $color;
+    public static int $count = 0;
 
     public function __construct(string $color)
     {
         $this->color = $color;
+        self::$count++;
     }
 
     public abstract function calculateArea():float;
